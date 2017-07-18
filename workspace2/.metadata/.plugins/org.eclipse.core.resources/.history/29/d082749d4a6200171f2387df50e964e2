@@ -1,0 +1,106 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<script>
+Highcharts.chart('container', {
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: 'Student Mark Sheet'
+    },
+    subtitle: {
+        text: 'Source: Tnresults.in'
+    },
+    xAxis: {
+        categories: [
+            'Tamil',
+            'English',
+            'Mathematics',
+            'Physics',
+            'Chemistry',
+            'Biology',
+            'Total',
+        ],
+        crosshair: true
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Marks'
+        }
+    },
+    tooltip: {
+        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+            '<td style="padding:0"><b>{point.y:.1f} mm</b></td></tr>',
+        footerFormat: '</table>',
+        shared: true,
+        useHTML: true
+    },
+    plotOptions: {
+        column: {
+            pointPadding: 0.2,
+            borderWidth: 0
+        }
+    },
+    series: [{
+    	$(document).ready(function(){
+    	$.ajax({
+    		url: "http://localhost:8080/RESTfulExample/rest/data/marks/muthu",
+    		method: "GET",
+    		success: function(data) {
+    			console.log(data);
+    			var name = [];
+    			var marks = [];
+
+    			for(var i in data) {
+    				name.push("Tamil " + data[i].name)
+    				name.push("English " + data[i].name)
+    				name.push("mathematics " + data[i].name)
+    				name.push("Physics " + data[i].name)
+    				name.push("Chemistry " + data[i].name)
+    				name.push("Biology " + data[i].name)
+    				name.push("Total " + data[i].name);
+    			}
+
+    			var chartdata = {
+    				labels: marks,
+    				datasets : [
+    					{
+    						label: 'Student marks',
+    						backgroundColor: 'rgba(200, 200, 200, 0.75)',
+    						borderColor: 'rgba(200, 200, 200, 0.75)',
+    						hoverBackgroundColor: 'rgba(200, 200, 200, 1)',
+    						hoverBorderColor: 'rgba(200, 200, 200, 1)',
+    						data: score
+    					}
+    				]
+    			};
+
+    			var ctx = $("#mycanvas");
+
+    			var barGraph = new Chart(ctx, {
+    				type: 'bar',
+    				data: chartdata
+    			});
+    		},
+    		error: function(data) {
+    			console.log(data);
+    		}
+    	});
+    });
+    	}]
+})</script>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Marks in bar chart</title>
+</head>
+<body>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<div id="container"	 style="min-width:310px; height:400px; margin:0 auto"></div>
+
+</body>
+</html>

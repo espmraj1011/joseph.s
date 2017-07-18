@@ -1,0 +1,57 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	
+	
+    $("button").click(function(){
+    	
+    	
+        $.ajax({url: "http://localhost:8080/RESTfulExample/rest/data/marks/guru", 
+        	success: function(result){
+        		console.log(result);
+            	$("#div1").html("Name : "+result.name);
+            	$("#div2").html("DateOfBirth : "+result.dateOfBirth);
+            	$("#div3").html("Tamil : "+result.tamil);
+            	$("#div4").html("English : "+result.english);
+            	$("#div5").html("Mathematics : "+result.mathematics);
+            	$("#div6").html("Physics : "+result.physics);
+            	$("#div7").html("Chemistry : "+result.chemistry);
+            	$("#div8").html("Boilogy : "+result.biology);
+            	$("#div9").html("Total : "+result.total);
+        	},
+        	error : function (a,b,c){
+        		console.log(a,b,c);
+        	}
+        });
+        
+        
+        
+    });
+    
+    
+    
+});
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div id="div1"></div>
+<div id="div2"></div>
+<div id="div3"></div>
+<div id="div4"></div>
+<div id="div5"></div>
+<div id="div6"></div>
+<div id="div7"></div>
+<div id="div8"></div>
+<div id="div9"></div>
+
+<button>Get External Content</button>
+
+</body>
+</html>

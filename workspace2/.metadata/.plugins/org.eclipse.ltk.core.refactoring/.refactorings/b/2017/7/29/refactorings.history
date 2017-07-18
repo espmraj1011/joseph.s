@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;Inserttemp.java&apos; to &apos;b&apos;" description="Move &apos;Inserttemp.java&apos; to &apos;b&apos;" destination="src/main/java/b" element1="/RESTfulExample/src/main/java/com/mkyong/rest/Inserttemp.java" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1500357725739" updateReferences="true"/>
+</session>

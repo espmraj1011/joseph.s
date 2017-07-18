@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+header, footer {
+	padding: 1em;
+	clear: left;
+	text-align: center;
+	}
+	article {
+	padding: 1em;
+	overflow: hidden;
+	text-align:center;
+}
+</style>
+<meta charset="ISO-8859-1">
+<title>OTP Generation</title>
+</head>
+<body>
+<header>
+<img src='https://iocl.rightwatts.com/images/logo.png' alt='RightWatts Solutions'style= 'width:500px;'>
+				</header>
+			
+<article>
+<p>Please find the OTP</p><br>
+<h1>1234</h1></article>
+</body>
+</html>
