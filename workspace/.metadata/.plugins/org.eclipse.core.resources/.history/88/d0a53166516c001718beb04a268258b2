@@ -1,0 +1,18 @@
+package espm;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class Conn {
+	
+	
+	protected static Connection getConnection() throws Exception {
+		
+		String myUrl = "jdbc:mysql://localhost:3306/testdb";
+		Class.forName("com.mysql.jdbc.Driver");
+		Connection conn = DriverManager.getConnection(myUrl, "root", "abcd1234");
+		
+		return conn;
+	}
+
+}

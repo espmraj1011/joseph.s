@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="month_name" key="selection"/>
+		<list key="findhistory">
+			<item value="month_name"/>
+			<item value="Month_name"/>
+			<item value="Day"/>
+			<item value="Name"/>
+			<item value="name"/>
+		</list>
+	</section>
+</section>
