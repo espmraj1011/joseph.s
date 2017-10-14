@@ -1,0 +1,38 @@
+package com.mkyong.rest;
+ 
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.core.Response;
+ 
+@Path("/hello")
+public class HelloWorldService {
+ 
+	@GET
+	@Path("/{param}")
+	public Response getMsg(@PathParam("param") String msg) {
+ 
+		String output =  msg;
+ 
+		return Response.status(200).entity(output).build();
+ 
+	}
+	@GET
+	@Path("login/{userName}/{password}")
+	@Consumes(MediaType.APPLICATION_JSON)
+	public LoginVO getLogin(@PathParam("userName") String userName,
+			@PathParam("password") String password) {
+		LoginVO response = new LoginVO();
+ 
+		if(userName.equals("muthuraj")&&password.equals("abcd1234")){
+			response.setResp("true");
+			return response;
+		}else{
+			response.setResp("false");
+			return response;
+		}
+ 
+ 
+	}
+ 
+}

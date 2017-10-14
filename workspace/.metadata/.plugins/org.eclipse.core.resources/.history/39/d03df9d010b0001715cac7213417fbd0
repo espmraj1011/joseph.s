@@ -1,0 +1,54 @@
+package com.mkyong.rest;
+
+public class UserVO {
+	private String firstName = null;
+	private String lastName = null;
+	private String dob = null;
+	private String company = null;
+	private String department = null;
+	private String password = null;
+	private int passedOut =0;
+	public String getFirstName() {
+		return firstName;
+	}
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+	public String getLastName() {
+		return lastName;
+	}
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+	public String getDob() {
+		return dob;
+	}
+	public void setDob(String dob) {
+		this.dob = dob;
+	}
+	public String getCompany() {
+		return company;
+	}
+	public void setCompany(String company) {
+		this.company = company;
+	}
+	public String getDepartment() {
+		return department;
+	}
+	public void setDepartment(String department) {
+		this.department = department;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	public int getPassedOut() {
+		return passedOut;
+	}
+	public void setPassedOut(int passedOut) {
+		this.passedOut = passedOut;
+	}
+
+}

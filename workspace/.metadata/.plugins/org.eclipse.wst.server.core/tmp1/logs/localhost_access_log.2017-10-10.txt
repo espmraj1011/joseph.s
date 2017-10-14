@@ -1,0 +1,14 @@
+127.0.0.1 - - [10/Oct/2017:12:32:00 +0530] "GET / HTTP/1.1" 404 951
+0:0:0:0:0:0:0:1 - - [10/Oct/2017:12:32:43 +0530] "GET /RESTfulExample/rest/hello/muthu HTTP/1.1" 200 15
+0:0:0:0:0:0:0:1 - - [10/Oct/2017:12:32:44 +0530] "GET /favicon.ico HTTP/1.1" 404 973
+0:0:0:0:0:0:0:1 - - [10/Oct/2017:12:47:11 +0530] "GET /RESTfulExample/rest/hello/login/muthuraj/abcd1234 HTTP/1.1" 500 1039
+127.0.0.1 - - [10/Oct/2017:12:52:25 +0530] "GET / HTTP/1.1" 404 951
+0:0:0:0:0:0:0:1 - - [10/Oct/2017:12:53:07 +0530] "GET /RESTfulExample/rest/hello/login/muthu/abcd HTTP/1.1" 500 1039
+0:0:0:0:0:0:0:1 - - [10/Oct/2017:14:04:32 +0530] "GET /RESTfulExample/rest/hello/login/muthuraj/abcd1234 HTTP/1.1" 500 1039
+0:0:0:0:0:0:0:1 - - [10/Oct/2017:14:04:55 +0530] "GET /RESTfulExample/rest/hello/login/muthu/12234 HTTP/1.1" 500 1039
+0:0:0:0:0:0:0:1 - - [10/Oct/2017:14:15:22 +0530] "GET /RESTfulExample/rest/hello/login/muthu/12234 HTTP/1.1" 500 1039
+0:0:0:0:0:0:0:1 - - [10/Oct/2017:14:22:11 +0530] "GET /RESTfulExample/rest/hello/login/muthu/12234 HTTP/1.1" 200 15
+0:0:0:0:0:0:0:1 - - [10/Oct/2017:14:23:41 +0530] "GET /RESTfulExample/rest/hello/login/muthu/abcd HTTP/1.1" 200 15
+0:0:0:0:0:0:0:1 - - [10/Oct/2017:14:23:56 +0530] "GET /RESTfulExample/rest/hello/login/muthuraj/abcd1234 HTTP/1.1" 200 14
+0:0:0:0:0:0:0:1 - - [10/Oct/2017:14:32:45 +0530] "GET /RESTfulExample/rest/hello/login/muthuraj/abcd1234 HTTP/1.1" 200 14
+0:0:0:0:0:0:0:1 - - [10/Oct/2017:14:33:25 +0530] "GET /RESTfulExample/rest/hello/login/ HTTP/1.1" 200 15

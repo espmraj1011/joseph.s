@@ -1,0 +1,59 @@
+package com.mkyong.rest;
+ 
+import javax.ws.rs.Consumes;
+import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+
+ 
+@Path("/hello")
+public class HelloWorldService {
+ 
+	@GET
+	@Path("/{param}")
+	public Response getMsg(@PathParam("param") String msg) {
+ 
+		String output =  msg;
+ 
+		return Response.status(200).entity(output).build();
+ 
+	}
+	@GET
+	@Path("login/{userName}/{password}")
+	@Consumes(MediaType.APPLICATION_JSON)
+	public Response getLogin(@PathParam("userName") String userName,
+			@PathParam("password") String password) {
+		boolean response = false;
+ 
+		if(userName.equals("muthuraj")&&password.equals("abcd1234")){
+			response = true;
+		}else{
+			response = false;
+		}
+		return Response.ok().entity(String.valueOf(response)).build();
+ 
+ 
+	}
+	
+	@GET
+	@Path("/overload")
+	@Produces(MediaType.APPLICATION_JSON)
+	public OverVO retrieveAllProduct() {
+		OverVO total = new OverVO();
+		total.setCategories(DAO.retrieveAllCategories());
+		total.setProduct(DAO.retrieveAllProduct());
+		return total;
+	}
+	
+	@POST
+	@Path("/createuser")
+	@Consumes(MediaType.APPLICATION_JSON)
+	public String createStoreCustomer(@RequestBody UserVO obj) {
+		return DAO.createUser(obj);
+	}
+ 
+}

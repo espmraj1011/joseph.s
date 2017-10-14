@@ -1,0 +1,50 @@
+package com.mkyong.rest;
+
+
+public class Queries {
+	
+	
+	public static String retrieveAllCategoryQuery(){
+		StringBuffer buffer = new StringBuffer();
+		buffer.append("select ")
+		.append(" c.CategoryId, c.CategoryName, c.Description")
+		.append(" from ") 
+		.append(" [categories] c");
+		return buffer.toString();
+	}
+
+	public static String retrieveAllProductQuery(){
+		StringBuffer buffer = new StringBuffer();
+		buffer.append("select ")
+		.append(" p.ProductId, p.ProductName, p.SupplierId, p.CategoryId, p.Unit, p.Price")
+		.append(" from ") 
+		.append(" [products] p");
+		return buffer.toString();
+	}
+	
+	public static String retrieveAllUsersQuery(){
+		StringBuffer buffer = new StringBuffer();
+		buffer.append("select ")
+		.append(" FirstName, LastName, Department, DOB, Company, PassedOut, Password")
+		.append(" from ") 
+		.append(" UserDetails");
+		return buffer.toString();
+	}
+
+	
+	public static String createUserQuery(UserVO obj){
+		StringBuffer buffer = new StringBuffer();
+		buffer.append("insert into UserDetails(FirstName, LastName, Department, DOB, Company, PassedOut, Password)")
+		.append("values(")
+		.append("'").append(obj.getFirstName()).append("',")
+		.append("'").append(obj.getLastName()).append("',")
+		.append("'").append(obj.getDepartment()).append("',")
+		.append("'").append(obj.getDob()).append("',")
+		.append("'").append(obj.getCompany()).append("',")
+		.append("'").append(obj.getPassedOut()).append("',")
+		.append("'").append(obj.getPassword()).append("')");
+
+		
+		return buffer.toString();
+	}
+}

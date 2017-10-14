@@ -1,0 +1,15 @@
+127.0.0.1 - - [12/Oct/2017:14:55:50 +0530] "GET / HTTP/1.1" 404 951
+127.0.0.1 - - [12/Oct/2017:16:50:58 +0530] "GET / HTTP/1.1" 404 951
+0:0:0:0:0:0:0:1 - - [12/Oct/2017:16:51:14 +0530] "GET /RestfulExample/rest/hello/love HTTP/1.1" 404 1011
+0:0:0:0:0:0:0:1 - - [12/Oct/2017:16:51:48 +0530] "GET /RestfulExample/rest/hello/ HTTP/1.1" 404 1003
+0:0:0:0:0:0:0:1 - - [12/Oct/2017:17:24:37 +0530] "GET /RestfulExample/rest/hello/ HTTP/1.1" 404 1003
+0:0:0:0:0:0:0:1 - - [12/Oct/2017:17:25:47 +0530] "GET /RESTfulExample/rest/hello/muthu HTTP/1.1" 200 15
+0:0:0:0:0:0:0:1 - - [12/Oct/2017:17:26:02 +0530] "GET /RESTfulExample/rest/hello/createuser HTTP/1.1" 405 1013
+0:0:0:0:0:0:0:1 - - [12/Oct/2017:17:33:58 +0530] "GET /RESTfulExample/rest/hello/creat HTTP/1.1" 200 15
+0:0:0:0:0:0:0:1 - - [12/Oct/2017:17:45:57 +0530] "POST /RESTfulExample/rest/hello/createuser HTTP/1.1" 415 1092
+0:0:0:0:0:0:0:1 - - [12/Oct/2017:17:55:04 +0530] "POST /RESTfulExample/rest/hello/createuser HTTP/1.1" 415 1092
+0:0:0:0:0:0:0:1 - - [12/Oct/2017:18:53:10 +0530] "POST /RESTfulExample/rest/hello/createuser HTTP/1.1" 415 1092
+127.0.0.1 - - [12/Oct/2017:18:55:35 +0530] "GET / HTTP/1.1" 404 951
+0:0:0:0:0:0:0:1 - - [12/Oct/2017:18:58:38 +0530] "POST /RESTfulExample/rest/hello/createuser HTTP/1.1" 415 1092
+127.0.0.1 - - [12/Oct/2017:19:05:17 +0530] "GET / HTTP/1.1" 404 951
+0:0:0:0:0:0:0:1 - - [12/Oct/2017:19:07:10 +0530] "POST /RESTfulExample/rest/hello/createuser HTTP/1.1" 415 1092
